@@ -20,12 +20,12 @@ class Config(Singleton):
         self.default_config = {
             "version": 3,
             "cache": {
-                "value": False,
-                "default": False,
+                "value": True,
+                "default": True,
                 "describe": "A toggle to enable cache function or not. Set value to true to enable it."
             },
             "mpg123_parameters": {
-                "value": [],
+                "value": ["-p", "http://124.232.147.22:80"],
                 "default": [],
                 "describe": "The additional parameters when mpg123 start."
             },
@@ -59,8 +59,8 @@ class Config(Singleton):
                             "Uses gtk notation for keybinds."
             },
             "notifier": {
-                "value": True,
-                "default": True,
+                "value": False,
+                "default": False,
                 "describe": "Notifier when switching songs."
             }
 
